@@ -1,0 +1,142 @@
+﻿Departmental Store Management        System
+
+
+ Main menu
+1.Add Goods
+2.Edit goods
+3.Display Goods
+4.Search Goods
+5.Delete Goods
+6.Calculate bill
+7.Exit
+  Records 
+1. serial  number 
+2. Item number
+3.Item 
+4.Product rate
+5.Quantity
+
+
+                                  
+Extras : 
+Welcome page 
+Login page for owner
+
+
+
+
+ 
+
+
+Add goods 
+Enter new records (y\n)? ______ .
+If  y, then add articles
+
+
+1. Enter new code of article (should be unique)
+2. Enter rate 
+3. Enter quantity
+4. Enter name 
+                                                                                     {update serial no.}
+
+
+Now it asks again whether to enter another new record or not.
+
+
+Edit Records :
+Asks user to enter item code and check exists or not .
+It exists ,display the details of the item code .
+
+
+Then ask whether to edit this record or not . (Y/N)
+If No, Then back to main menu.
+if  Yes, Enter your choice whether you want to edit name , code , rate or quantity .
+Modify with the new detail.
+
+
+Display Goods 
+Display all records in table format.
+
+
+Search ->
+Ask to search    ~ by code
+                          ~ by rate
+                          ~ by quantity
+Now it displays records according to entered choice .
+
+
+
+
+
+
+              [Back to main menu ]   ---{optional option }
+
+
+
+
+
+
+Delete product 
+Enter item code 
+If code exists, delete that record .
+
+
+Calculate bill 
+ enter end to - STOP TAKING INPUT.
+1.Enter item code 
+2. Enter quantity
+Display a table showing our output and making a total amount to be paid.
+ for example  ~ 
+                                           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                Bill 
+
+
+Sn.
+	Product name
+	qty
+	rate
+	Total
+	1.
+	pen
+	1
+	25.00
+	25.00
+	2.
+	pencil
+	4
+	20.00
+	80.00
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+                                                           Total amount  : 105.00
+	
+
+After a bill is created , make an update on quantity of goods left .
+
+
+Exit 
+              exit the program………..
