@@ -1,7 +1,7 @@
-#include <stdio.h> //kopil weds sneha bamriya ( in dreams only)
+#include <stdio.h> //
 #include <stdlib.h>arunnnnnn
 #include <string.h>shruti
-#include <math.h>//ritish bhangda hai 
+#include <math.h>//
 struct loginCredential
 {
   char userid[50];
