@@ -33,8 +33,8 @@ static int a=0;
 int main()
 {
 
-  //Welcomepage();
-  MainMenu();
+  welcomepage();
+ // MainMenu();
   return 0;
 }
 void welcomepage()
@@ -49,69 +49,7 @@ void welcomepage()
   printf("\n\n\n\n\n\n\n");
   printf("****                                           ");
 }
-void mainMenu(int i)
-{
 
-  int choice;
-  while (1)
-  {
-    if (i == 1)
-    {
-      printf("\n\t\t\t        ++++++++++++++++++++++++++++++++++++++++++++++++      ");
-      printf("\n\t\t\t\t+   WELCOME CLOTHING STORE MANAGEMENT SYSTEM   +      ");
-      printf("\n\t\t\t        ++++++++++++++++++++++++++++++++++++++++++++++++      ");
-      printf("                                                                                          ");
-      printf("                                                                                          ");
-      printf("\n\t\t\t\t FEATURE OF CLOTHING STORE\n\t\t\t\t __");
-      printf("\n\t\t\t\t\t\t MAIN MENU\n\t\t\t\t\t\t............");
-      printf("\n\t\t\t\t| [1] ADD_PRODUCT                              |");
-      printf("\n\t\t\t\t| ___|");
-      printf("\n\t\t\t\t| [2] DELETE_PRODUCT                           |");
-      printf("\n\t\t\t\t| ___|");
-      printf("\n\t\t\t\t| [3] SEARCH_PRODUCT                           |");
-      printf("\n\t\t\t\t| ___|");
-      printf("\n\t\t\t\t| [4] DISPLAY_PRODUCT                          |");
-      printf("\n\t\t\t\t| ___|");
-      printf("\n\t\t\t\t| [5] EDIT_PRODUCT                             |");
-      printf("\n\t\t\t\t| ___|");
-      printf("\n\t\t\t\t| [6] EXIT                                     |\n\t\t\t\t____\n\t\t\t\t\t\t\t\t");
-      printf("\n\t\t\t\t|ENTER CHOICE\n\n");
-
-      scanf("%d", &choice);
-      switch (choice)
-      {
-      case 1:
-        addProduct();
-        break;
-      case 2:
-        Delete_Product();
-        break;
-      case 3:
-        Search_Product();
-        break;
-      case 4:
-        Display_Product();
-        break;
-      case 5:
-        Edit_Product();
-        break;
-      case 6:
-        exit(0);
-      }
-    }
-  }
-  if (i == 2)
-  {
-     printf("\n\t\t\t\t\t\t MAIN MENU FOR USER\n\t\t\t\t\t\t............");    
- printf("\n\t\t\t\t| [1] DISPLAY_PRODUCT                              |");
- printf("\n\t\t\t\t| _________________|");
- printf("\n\t\t\t\t| [2] SEARCH ANY_PRODUCT                           |");
- printf("\n\t\t\t\t| _________________|");
- printf("\n\t\t\t\t| [3] MAKE_PURCHASE                                |");
- printf("\n\t\t\t\t| _________________|");
- printf("\n\t\t\t\t| [4] EXIT                                     |\n\t\t\t\t__________________\n\t\t\t\t\t\t\t\t");
-  }
-}
 void loginpage()
 { int choice,i;
     char AdminID[15]; 
@@ -209,6 +147,69 @@ printf("\nUserID doesn't exist");
 } 
          
   }    
+}
+void mainMenu(int i)
+{
+
+  int choice;
+  while (1)
+  {
+    if (i == 1)
+    {
+      printf("\n\t\t\t        ++++++++++++++++++++++++++++++++++++++++++++++++      ");
+      printf("\n\t\t\t\t+   WELCOME CLOTHING STORE MANAGEMENT SYSTEM   +      ");
+      printf("\n\t\t\t        ++++++++++++++++++++++++++++++++++++++++++++++++      ");
+      printf("                                                                                          ");
+      printf("                                                                                          ");
+      printf("\n\t\t\t\t FEATURE OF CLOTHING STORE\n\t\t\t\t __");
+      printf("\n\t\t\t\t\t\t MAIN MENU\n\t\t\t\t\t\t............");
+      printf("\n\t\t\t\t| [1] ADD_PRODUCT                              |");
+      printf("\n\t\t\t\t| ___|");
+      printf("\n\t\t\t\t| [2] DELETE_PRODUCT                           |");
+      printf("\n\t\t\t\t| ___|");
+      printf("\n\t\t\t\t| [3] SEARCH_PRODUCT                           |");
+      printf("\n\t\t\t\t| ___|");
+      printf("\n\t\t\t\t| [4] DISPLAY_PRODUCT                          |");
+      printf("\n\t\t\t\t| ___|");
+      printf("\n\t\t\t\t| [5] EDIT_PRODUCT                             |");
+      printf("\n\t\t\t\t| ___|");
+      printf("\n\t\t\t\t| [6] EXIT                                     |\n\t\t\t\t____\n\t\t\t\t\t\t\t\t");
+      printf("\n\t\t\t\t|ENTER CHOICE\n\n");
+
+      scanf("%d", &choice);
+      switch (choice)
+      {
+      case 1:
+        addProduct();
+        break;
+      case 2:
+        Delete_Product();
+        break;
+      case 3:
+        Search_Product();
+        break;
+      case 4:
+        Display_Product();
+        break;
+      case 5:
+        Edit_Product();
+        break;
+      case 6:
+        exit(0);
+      }
+    }
+  }
+  if (i == 2)
+  {
+     printf("\n\t\t\t\t\t\t MAIN MENU FOR USER\n\t\t\t\t\t\t............");    
+ printf("\n\t\t\t\t| [1] DISPLAY_PRODUCT                              |");
+ printf("\n\t\t\t\t| _________________|");
+ printf("\n\t\t\t\t| [2] SEARCH ANY_PRODUCT                           |");
+ printf("\n\t\t\t\t| _________________|");
+ printf("\n\t\t\t\t| [3] MAKE_PURCHASE                                |");
+ printf("\n\t\t\t\t| _________________|");
+ printf("\n\t\t\t\t| [4] EXIT                                     |\n\t\t\t\t__________________\n\t\t\t\t\t\t\t\t");
+  }
 }
 void addProduct()
 { char ch;
@@ -343,4 +344,5 @@ printf("\nid not found");
 }
 void calculateBill()
 {
+  
 }
