@@ -1,4 +1,4 @@
-#include <stdio.h>kapill
+#include <stdio.h> //kopil weds sneha bamriya ( in dreams only)
 #include <stdlib.h>arunnnnnn
 #include <string.h>shruti
 #include <math.h>//ritish bhangda hai 
