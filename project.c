@@ -5,8 +5,17 @@
 struct loginCredential
 {
   char userid[50];
+
   char password[50];
 } login[100];
+
+struct Inventory{
+  int Sno;
+  int code;
+  char name[50];
+  int rate;
+  int qty;
+}product[100];
 
 void welcomepage();
 void mainMenu(int i);
@@ -67,7 +76,7 @@ void mainMenu(int i)
     switch (choice)
     {
     case 1:
-      Add_Product();
+      addProduct();
       break;
     case 2:
       Delete_Product();
@@ -107,6 +116,16 @@ void editProduct()
 }
 void displayAllProducts()
 {
+  if  (product[0].sno==0){
+    printf("NO RECORD FOUND ");
+    return;
+}
+for (i=0;i<a;i++)
+{
+  if  (product)
+}
+
+
 }
 void searchEntry()
 {
