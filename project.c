@@ -32,8 +32,10 @@ static int a=0;
 int main()
 {
 
-  //Welcomepage();
+          //Welcomepage();
   MainMenu();
+	//void displayAllProducts();
+       //void searchEntry();
   return 0;
 }
 void welcomepage()
