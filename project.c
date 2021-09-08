@@ -5,13 +5,11 @@
 struct loginCredential
 {
   char userid[50];
-
   char password[50];
 } login[100];
 
 struct Inventory
 {
-  int Sno;
   int code;
   char name[50];
   int rate;
@@ -30,7 +28,7 @@ void searchEntry();
 void deleteProduct();
 void calculateBill();
 
-static int count=0;
+static int a=0;
 int main()
 {
 
@@ -206,6 +204,7 @@ printf("\nUserID doesn't exist");
 }
 void addProduct()
 { char ch;
+int  j;
 while(1){
   printf("Add new record ? Y/N ");
   scanf("%c",&ch);
@@ -214,8 +213,31 @@ if(ch=='N'||'n'){
 }
 else if(ch=='Y'||'y'){
   printf("Enter new product code");
-  scanf("")
+  scanf("%d",&product[a].code);
+  printf("\nProduct code should not be repeated and cannot be zero.\n");
+		for (j = 0; j < a; j++)
+		{
+			if (product[a].code == product[j].code)
+			{
+				printf("duplicate product code..re enter");
+				addProduct();
+			}
+			if (product[a].code == 0)
+			{
+				printf("Product code cannot be zero..re enter");
+				addProduct();
+			}
+		}
+    printf("Enter new product name");
+    scanf("%s",&product[a].name);
+    printf("Enter new product rate");
+    scanf("%d",&product[a].rate);
+    printf("Enter new product quantity");
+    scanf("%d",&product[a].qty);
+    printf("Enter the gender ");
+    scanf("%c",&product[a].gender);
 
+ ++a;
 }
 else{
   printf("Invalid choice.Retry");
