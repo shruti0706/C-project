@@ -4,7 +4,7 @@
 #include <math.h>
 struct loginCredential
 {
-  char userid[50];
+  char UserID[50];
   char password[50];
 } login[100];
 
@@ -103,7 +103,7 @@ void mainMenu(int i)
   {
   }
 }
-void loginpage()
+void loginpage()  //login page
 { int choice,i;
     char AdminID[15]; 
     char password[12]; 
@@ -275,6 +275,42 @@ void searchEntry()
 }
 void deleteProduct()
 {
+	
+int i,j,k;
+ int code;
+ char name[20];
+ if(product[0].code == 0)
+ {
+     printf("Item code not found ");
+     return;
+ }
+ 
+ printf("Enter the code of product you want to Delete :");
+ scanf("%d",&code);
+ for(i=0;i<a;i++)
+ if(k=1)
+ {
+ if(product[i].code==code)
+ {
+     for(j=i;j<a-1;j++)
+     {
+         product[j].code==product[j+1].code; 
+         product[j].name==product[j+1].name;
+     }
+    
+ if(product[j]==0)
+ printf("Item deleted Successfully.");
+ return;
+ }
+ 
+ else
+ {
+     k=0;
+ }
+ }
+ if(k==0)
+ printf("\n code not found ");
+ 	
 }
 void calculateBill()
 {
