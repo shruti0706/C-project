@@ -272,6 +272,24 @@ void displayAllProducts()
 }
 void searchEntry()
 {
+	
+      int s,a;
+        
+  if (product[0].Sno == 0){
+    printf(" ***     NO RECORD AVAILABLE     ***  ");
+    return;
+  }
+  printf("\nEnter Product code  whose record you want to search : ");
+    scanf("%d",&s);
+     printf("%9s %9s %9s %9s %9s","Sno" ," code "," name ", " rate  "," qty " );
+       for (int i=0;i<a;i++){
+        int f=1;
+                 if(product[i].code==s){
+                     printf("%9d %9d %9s %9d %9d ",product[i].Sno, product[i].code, product[i].name, product[i].rate, product[i].qty );
+                 }
+       }
+     
+	
 }
 void deleteProduct()
 {
