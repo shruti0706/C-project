@@ -1,7 +1,7 @@
 #include <stdio.h>kapill
 #include <stdlib.h>arunnnnnn
 #include <string.h>shruti
-#include <math.h>ragisg
+#include <math.h>//ritish bhangda hai 
 struct loginCredential
 {
   char userid[50];
