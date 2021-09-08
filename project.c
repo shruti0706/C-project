@@ -4,12 +4,13 @@
 #include <math.h>
 struct loginCredential
 {
-  char UserID[50];
+  char userid[50];
   char password[50];
 } login[100];
 
 struct Inventory
 {
+  int sno;
   int code;
   char name[50];
   int rate;
@@ -32,10 +33,8 @@ static int a=0;
 int main()
 {
 
-          //Welcomepage();
+  //Welcomepage();
   MainMenu();
-	//void displayAllProducts();
-       //void searchEntry();
   return 0;
 }
 void welcomepage()
@@ -103,9 +102,17 @@ void mainMenu(int i)
   }
   if (i == 2)
   {
+     printf("\n\t\t\t\t\t\t MAIN MENU FOR USER\n\t\t\t\t\t\t............");    
+ printf("\n\t\t\t\t| [1] DISPLAY_PRODUCT                              |");
+ printf("\n\t\t\t\t| _________________|");
+ printf("\n\t\t\t\t| [2] SEARCH ANY_PRODUCT                           |");
+ printf("\n\t\t\t\t| _________________|");
+ printf("\n\t\t\t\t| [3] MAKE_PURCHASE                                |");
+ printf("\n\t\t\t\t| _________________|");
+ printf("\n\t\t\t\t| [4] EXIT                                     |\n\t\t\t\t__________________\n\t\t\t\t\t\t\t\t");
   }
 }
-void loginpage()  //login page
+void loginpage()
 { int choice,i;
     char AdminID[15]; 
     char password[12]; 
@@ -187,8 +194,7 @@ printf("\nAdminID doesn't exist");
  
         printf("\nWelcome. LOGIN SUCCESS!"); 
        //UserMenu();
- 
-        }
+         }
     
         else
         { 
@@ -230,6 +236,7 @@ else if(ch=='Y'||'y'){
 				addProduct();
 			}
 		}
+    product[a].sno=a+1;
     printf("Enter new product name");
     scanf("%s",&product[a].name);
     printf("Enter new product rate");
@@ -250,6 +257,7 @@ else{
 }
 void editProduct()
 {
+
 }
 void displayAllProducts()
 {
@@ -257,16 +265,16 @@ void displayAllProducts()
 
         int a=10;
         
-  if (product[0].Sno == 0)
+  if (product[0].sno == 0)
   {
     printf("NO RECORD FOUND ");
     return;
   }
-    printf("%9s %9s %9s %9s %9s","Sno" ," code "," name ", " rate  "," qty " );
+    printf("%9s %9s %9s %9s %9s","sno" ," code "," name ", " rate  "," qty " );
  
      
        for (int i=0;i<a;i++){
-    printf("%9d %9d %9s %9d %9d ",product[i].Sno, product[i].code, product[i].name, product[i].rate, product[i].qty );
+    printf("%9d %9d %9s %9d %9d ",product[i].sno, product[i].code, product[i].name, product[i].rate, product[i].qty );
        }
 
 
@@ -274,20 +282,20 @@ void displayAllProducts()
 }
 void searchEntry()
 {
-	
+
       int s,a;
         
-  if (product[0].Sno == 0){
-    printf(" ***     NO RECORD AVAILABLE     ***  ");
+  if (product[0].sno == 0){
+    printf(" *     NO RECORD AVAILABLE     *  ");
     return;
   }
   printf("\nEnter Product code  whose record you want to search : ");
     scanf("%d",&s);
-     printf("%9s %9s %9s %9s %9s","Sno" ," code "," name ", " rate  "," qty " );
+     printf("%9s %9s %9s %9s %9s","sno" ," code "," name ", " rate  "," qty " );
        for (int i=0;i<a;i++){
         int f=1;
                  if(product[i].code==s){
-                     printf("%9d %9d %9s %9d %9d ",product[i].Sno, product[i].code, product[i].name, product[i].rate, product[i].qty );
+                     printf("%9d %9d %9s %9d %9d ",product[i].sno, product[i].code, product[i].name, product[i].rate, product[i].qty );
                  }
        }
      
@@ -295,42 +303,43 @@ void searchEntry()
 }
 void deleteProduct()
 {
-	
-int i,j,k;
- int code;
- char name[20];
- if(product[0].code == 0)
- {
-     printf("Item code not found ");
-     return;
- }
- 
- printf("Enter the code of product you want to Delete :");
- scanf("%d",&code);
- for(i=0;i<a;i++)
- if(k=1)
- {
- if(product[i].code==code)
- {
-     for(j=i;j<a-1;j++)
-     {
-         product[j].code==product[j+1].code; 
-         product[j].name==product[j+1].name;
-     }
-    
- if(product[j]==0)
- printf("Item deleted Successfully.");
- return;
- }
- 
- else
- {
-     k=0;
- }
- }
- if(k==0)
- printf("\n code not found ");
- 	
+  int id, i,f,j;
+	if (product[0].code == 0)
+	{
+		printf("No record found");
+		return;
+	}
+	printf("\nEnter employee id whose record you want to delete:");
+	scanf("%d", &id);
+
+	for (i = 0; i < a; i++)
+	{f=1;
+
+		if (product[i].code == id)
+		{ 
+			for(j=i;j<a-1;j++){
+			    product[j].code=product[j+1].code;
+			   *product[j].name=*product[j+1].name;
+			   product[j].rate=product[j+1].rate;
+			   product[j].qty=product[j+1].qty;
+			   product[j].gender=product[j+1].gender;
+
+			}
+			 product[j].code=0;
+		    
+			printf("record deleted successfully");
+			return;
+
+			}
+
+		else
+		{
+			f=0;
+		}
+	}
+	if(f==0)
+printf("\nid not found");
+
 }
 void calculateBill()
 {
