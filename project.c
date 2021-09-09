@@ -16,8 +16,9 @@ struct Inventory
   char name[50];
   int rate;
   int quantity;
-  char gender;
-} product[100];
+char gender;
+struct Inventory *next;
+} *start=NULL,*currrent=NULL; 
 
 void welcomepage();
 void mainMenu(int i);
