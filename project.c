@@ -1,10 +1,11 @@
+// Online C compiler to run C program online
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 struct loginCredential
 {
-  char userid[50];
+  int userid;
   char password[50];
 } login[100];
 
@@ -32,26 +33,29 @@ static int a = 0;
 static int n = 0;
 int main()
 {
-  clrscr();
+//   clrscr();
 
   welcomepage();
   loginpage();
-  getch();
+//   getch();
   return 0;
 }
 void welcomepage()
 {
 
-  printf("****                                           ");
+    
+        printf("************************************                                           ");
+        
+        printf("\n\n\n\n\n\n                :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n                ::                                                                 ::");
+       
+           printf("\n                ::                                                                 ::\n                ::                                                                 ::\n                ::                                                                 ::\n                ::                                                                 ::\n                ::                          FASHION HUB                            ::  \n                ::                                                                 ::\n                ::                                                                 ::\n                ::                                                                 ::\n                ::                                                                 ::\n                ::                                                                 ::\n                ::                                                                 ::\n                ::                                  A style for every story...     ::\n                ");
+            printf(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+        printf("\n\n\n\n\n\n\n");
+       printf("************************************                                           ");
+         
 
-  printf("\n\n\n\n\n\n                :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n                ::");
-  ::");
 
-      printf("\n                ::                                                                 ::\n                :: ");
-  ::\n :: ::\n :: ::\n ::FASHION HUB ::  \n :: ::\n :: ::\n :: ::\n :: ::\n :: ::\n :: ::\n ::");
-      printf(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-  printf("\n\n\n\n\n\n\n");
-  printf("****                                           ");
+    
 }
 
 void loginpage()
@@ -68,10 +72,10 @@ void loginpage()
   {
 
     printf("Enter AdminID:\n");
-    scanf("%s", &AdminID);
+    scanf("%s", AdminID);
 
     printf("Enter password:\n");
-    scanf("%s", &password);
+    scanf("%s", password);
 
     if (strcmp(AdminID, "arun") == 0)
     {
@@ -85,7 +89,7 @@ void loginpage()
       else
       {
         printf("\nWrong Password please try again");
-        loginPage();
+        loginpage();
       }
     }
     else
@@ -110,18 +114,18 @@ void loginpage()
       if (login[n].userid == 0)
       {
         printf("user ID cannot be zero . Retry");
-        loginPage();
+        loginpage();
       }
       for (i = 0; i < n; i++)
       {
         if (login[i].userid == login[n].userid)
         {
           printf("duplicate user ID . Retry");
-          loginPage();
+          loginpage();
         }
       }
       printf("enter password");
-      scanf("%d", &login[n].password);
+      scanf("%s", &login[n].password);
       n++;
     }
     else if(ch==2){
@@ -245,7 +249,7 @@ void addProduct()
       }
       product[a].sno = a + 1;
       printf("Enter new product name");
-      scanf("%s", &product[a].name);
+      scanf("%s", product[a].name);
       printf("Enter new product rate");
       scanf("%d", &product[a].rate);
       printf("Enter new product quantity");
