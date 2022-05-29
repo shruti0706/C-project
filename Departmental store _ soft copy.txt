@@ -1,7 +1,7 @@
 ﻿Departmental Store Management        System
 
-
- Main menu
+ 
+Main menu
 1.Add Goods
 2.Edit goods
 3.Display Goods
