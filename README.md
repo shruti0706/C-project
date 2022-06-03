@@ -1,1 +1,1 @@
-# C-project
+# C-project on departmental store
